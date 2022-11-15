@@ -19,6 +19,7 @@ El endpoint de la API es http://localhost/web2/TP-Especial-Rest - Web2 - Tudai/a
 	http://localhost/web2/TP-Especial-Rest - Web2 - Tudai/api/productos
 
 -	Listar los productos de manera ordenada – Método GET: Lista todos los productos existentes en la base de datos de acuerdo a la columna seleccionada en sort de manera ascendente o descendente según se especifique en order.
+
 	http://localhost/web2/TP-Especial-Rest - Web2 - Tudai/api/productos/?sort=[nombre_de_columna]&order=[asc/desc]
 
 -	Seleccionar un producto determinado por su ID – Método GET/:ID: Muestra un producto específico de acuerdo al ID seleccionado. 
