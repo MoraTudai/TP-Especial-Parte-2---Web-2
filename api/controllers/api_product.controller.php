@@ -54,40 +54,7 @@ class ApiProductController {
         }
     }
    
-        
-      /*
-    }else if (isset($_GET['page']) && isset($_GET['limit']))
-    {
-      $page = $_GET['page'];
-      $limit = $_GET['limit'];
-      $page = (int)$page;
-      $limit = (int)$limit;
-      $offSet = ($limit * $page) - $limit;
-      $movies = $this->model->getByPagination($offSet,$limit);
-      if ($movies)
-      {
-        $this->view->response($movies);
-      }else
-      {
-        $this->view->response("No se encontraron peliculas",404);
-      }
-    }else if (isset($_GET['filter']) && isset($_GET['value'])){
-      $filters = array("id_gender_fk");
-      if (in_array($_GET['filter'],$filters)){
-        $filter = $_GET['filter'];
-        $value = $_GET['value'];
-        $movies = $this->model->getByFiltering($filter,$value);
-        if ($movies){
-          $this->view->response($movies);
-        }
-      }
-    }
-    
-  }
-        }
-*/
-
-
+     
 public function get($params = null) {
     //obtengo el id del arreglo de params
     $id = $params[':ID'];//si hubieramos utilizado más parametros en el ruter: 
@@ -101,15 +68,6 @@ public function get($params = null) {
         $this->view->response("El producto con el id: $id no existe", 404);
     }
 }
-
-    /*public function getOrderBy($params = null) {
-        $id = $params[':ID'];
-        $orderBy = $params[':ORDERBY'];
-        $productosOrdenados = $this->model->getOrderBy($id, $orderBy);
-
-        $this->view->response($productosOrdenados, 200);
-    }*/
-    
 
     public function insert($params = null){
         $producto = $this->getData();
